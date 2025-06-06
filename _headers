@@ -1,0 +1,99 @@
+# Netlify Headers Configuration for Ordin8 Website
+# Security headers for enhanced protection and performance
+
+/*
+  # Security Headers
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  
+  # Content Security Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://ordin8.netlify.app;
+  
+  # Performance Headers
+  Cache-Control: public, max-age=31536000, immutable
+  
+  # HSTS (HTTP Strict Transport Security)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Specific headers for HTML pages
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+  X-Robots-Tag: index, follow
+
+# CSS and JS files
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css; charset=utf-8
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript; charset=utf-8
+
+# Image files
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fonts
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/woff2
+
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/woff
+
+# Favicon
+/favicon.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# Contact form submission
+/contact.html
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://ordin8.netlify.app https://formspree.io;
+
+# Pilot program form
+/pilot-program.html
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://ordin8.netlify.app https://formspree.io;
+
+# API endpoints (if needed in future)
+/api/*
+  Access-Control-Allow-Origin: https://ordin8.netlify.app
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type, Authorization
+
+# Error pages
+/404.html
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex, nofollow
+
+# Sitemap and robots
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/xml
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain
+
+# Preload critical resources for better performance
+/
+  Link: </style.css>; rel=preload; as=style
+  Link: </script.js>; rel=preload; as=script
+  Link: <https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap>; rel=preload; as=style
+
+# Custom 404 page
+/*    /404.html   404
