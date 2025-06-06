@@ -3,39 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Ordin8 - Mission-Driven AI Education Non-Profit</title>
-    <meta name="description" content="Learn about Ordin8's mission to transform education through AI. We're a registered Section 8 non-profit with 80G and 12A certifications, committed to empowering 10,000+ students.">
-    <meta name="keywords" content="Ordin8 mission, Section 8 non-profit, AI education organization, educational technology India">
-    
+    <title>About Ordin8 - Empowering Education with AI</title>
+    <meta name="description" content="Learn about Ordin8's mission, vision, and impact in transforming education through AI-powered learning solutions.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Ordin8",
+      "alternateName": "Ordin8 Foundation",
+      "url": "https://ordin8.org",
+      "email": "ordin8forgood@gmail.com",
+      "foundingDate": "2024",
+      "nonprofitStatus": "NonprofitType",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "description": "AI-powered educational technology non-profit transforming learning for students across India",
+      "sameAs": [
+        "https://github.com/ordin8-foundation"
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
+        <div class="container">
+            <div class="nav-brand">
                 <a href="index.html">
-                    <span class="logo-text">Ordin8</span>
-                    <span class="logo-tagline">Non-Profit EdTech</span>
+                    <img src="/api/placeholder/120/40" alt="Ordin8 Logo" class="logo">
                 </a>
             </div>
-            
-            <div class="nav-menu" id="nav-menu">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link active">About</a>
                 <a href="technology.html" class="nav-link">Technology</a>
                 <a href="pilot-program.html" class="nav-link">Pilot Program</a>
                 <a href="resources.html" class="nav-link">Resources</a>
                 <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
             </div>
         </div>
     </nav>

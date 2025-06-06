@@ -9,47 +9,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Schema.org structured data -->
+    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "Ordin8",
-      "description": "Non-profit educational technology organization providing AI-powered learning support",
-      "url": "https://ordin8.org",
-      "sameAs": ["https://github.com/ordin8-org"],
-      "organizationType": "Non-profit",
-      "areaServed": "India",
-      "educationalLevel": ["Middle School", "High School"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Pilot Program Partnership",
-        "description": "Free AI-powered learning platform for schools"
-      }
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Ordin8",
+        "alternateName": "Ordin8 Foundation",
+        "url": "https://ordin8.org",
+        "email": "ordin8forgood@gmail.com",
+        "foundingDate": "2024",
+        "nonprofitStatus": "NonprofitType",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+        },
+        "description": "AI-powered educational technology non-profit transforming learning for students across India",
+        "sameAs": [
+            "https://github.com/ordin8-foundation"
+        ]
     }
     </script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
+        <div class="container">
             <div class="nav-brand">
-                <h1 class="logo">Ordin8</h1>
-                <span class="tagline">Empowering Education</span>
+                <a href="index.html">
+                    <img src="/api/placeholder/120/40" alt="Ordin8 Logo" class="logo">
+                </a>
             </div>
-            <div class="nav-menu" id="nav-menu">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="technology.html" class="nav-link">Technology</a>
                 <a href="pilot-program.html" class="nav-link active">Pilot Program</a>
                 <a href="resources.html" class="nav-link">Resources</a>
                 <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
         </div>
     </nav>
@@ -208,174 +210,8 @@
         <section class="application-section">
             <div class="container">
                 <h2>Apply for Partnership</h2>
-                <div class="form-container">
-                    <form name="pilot-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="application-form">
-                        <!-- Honeypot field for spam protection -->
-                        <p class="hidden">
-                            <input name="bot-field">
-                        </p>
-                        
-                        <div class="form-section">
-                            <h3>School Information</h3>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="school-name">School Name *</label>
-                                    <input type="text" id="school-name" name="school-name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="school-type">School Type *</label>
-                                    <select id="school-type" name="school-type" required>
-                                        <option value="">Select type</option>
-                                        <option value="government">Government School</option>
-                                        <option value="private">Private School</option>
-                                        <option value="aided">Government Aided</option>
-                                        <option value="international">International School</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="address">School Address *</label>
-                                    <textarea id="address" name="address" rows="3" required></textarea>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="city">City *</label>
-                                    <input type="text" id="city" name="city" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="state">State *</label>
-                                    <input type="text" id="state" name="state" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pincode">PIN Code *</label>
-                                    <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-section">
-                            <h3>Contact Person</h3>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="contact-name">Full Name *</label>
-                                    <input type="text" id="contact-name" name="contact-name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="designation">Designation *</label>
-                                    <input type="text" id="designation" name="designation" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-section">
-                            <h3>School Details</h3>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="total-students">Total Students (Grades 5-12) *</label>
-                                    <input type="number" id="total-students" name="total-students" min="100" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="teachers-count">Number of Teachers *</label>
-                                    <input type="number" id="teachers-count" name="teachers-count" min="5" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="grades">Grades Offered (Select all that apply)</label>
-                                    <div class="checkbox-group">
-                                        <label><input type="checkbox" name="grades" value="5"> Class 5</label>
-                                        <label><input type="checkbox" name="grades" value="6"> Class 6</label>
-                                        <label><input type="checkbox" name="grades" value="7"> Class 7</label>
-                                        <label><input type="checkbox" name="grades" value="8"> Class 8</label>
-                                        <label><input type="checkbox" name="grades" value="9"> Class 9</label>
-                                        <label><input type="checkbox" name="grades" value="10"> Class 10</label>
-                                        <label><input type="checkbox" name="grades" value="11"> Class 11</label>
-                                        <label><input type="checkbox" name="grades" value="12"> Class 12</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-section">
-                            <h3>Technology Infrastructure</h3>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="computer-lab">Do you have a computer lab? *</label>
-                                    <select id="computer-lab" name="computer-lab" required>
-                                        <option value="">Select option</option>
-                                        <option value="yes">Yes</option>
-                                        <option value="no">No</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="devices-count">Number of computers/tablets available</label>
-                                    <input type="number" id="devices-count" name="devices-count" min="0">
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="internet-speed">Internet Connection Speed</label>
-                                    <select id="internet-speed" name="internet-speed">
-                                        <option value="">Select speed</option>
-                                        <option value="less-than-10">Less than 10 Mbps</option>
-                                        <option value="10-25">10-25 Mbps</option>
-                                        <option value="25-50">25-50 Mbps</option>
-                                        <option value="50-100">50-100 Mbps</option>
-                                        <option value="more-than-100">More than 100 Mbps</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-section">
-                            <h3>Additional Information</h3>
-                            <div class="form-group">
-                                <label for="motivation">Why do you want to join the Ordin8 pilot program?</label>
-                                <textarea id="motivation" name="motivation" rows="4" placeholder="Tell us about your school's educational goals and how you think Ordin8 can help..."></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="challenges">What are your main educational challenges?</label>
-                                <textarea id="challenges" name="challenges" rows="3" placeholder="E.g., student engagement, differentiated learning, assessment, etc."></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-section">
-                            <div class="form-group checkbox-single">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="data-agreement" required>
-                                    I agree to share anonymized student learning data for research purposes and participate in the impact evaluation process. *
-                                </label>
-                            </div>
-                            
-                            <div class="form-group checkbox-single">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="commitment" required>
-                                    Our school commits to the full 12-month pilot program duration and will provide necessary support for implementation. *
-                                </label>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-large">Submit Application</button>
-                    </form>
-                </div>
+                <iframe style="border:none;width:100%;" id="pilot-application-form-4ah38d" src="https://opnform.com/forms/pilot-application-form-4ah38d"></iframe>
+                <script type="text/javascript" onload="initEmbed('pilot-application-form-4ah38d')" src="https://opnform.com/widgets/iframe.min.js"></script>
             </div>
         </section>
 
